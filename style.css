@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+:root {
+    --background:#2b2b2f;
+    --bar-bg:#252528;
+}
+
+body {
+    overflow: hidden;
+    background: #2b2b2f;
+    color: #ececf9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+main {
+    flex-wrap: wrap;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.svgeditor {
+    display: flex;
+    height: 100%;
+}
+
+.editor {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    position: absolute;
+}
+
+.data {
+    width: 100%;
+    background: var(--bar-bg);
+    border-left: 3px #0002 solid;
+}
+
+.leftbar .button {
+    padding: 12px;
+    font-size: 24px;
+    border-bottom: #0002 3px solid;
+    transition: 200ms;
+}
+
+.leftbar .selected {
+    background: #cecece;
+    color: #111;
+}
+
+.leftbar {
+    display: block;
+    height: 100%;
+    background: var(--bar-bg);
+}
+
+#workspace {
+    position: relative;
+    display: flex;
+    background: #fff;
+}
+
+.bg {
+    position: relative;
+}
+
+
+.text {
+    padding: 8px;
+    display: block;
+    text-align: center;
+}
+
+.svg {
+    z-index: -50;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    background: rgb(242, 242, 242);
+    width: 100vw;
+    height: 100vh;
+}
+
+path { pointer-events: all	}
+
+[bcolor]::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background: #020204;
+    display: block;
+    position: absolute;
+    border-radius: 3px;
+}
+
+[bcolor="green"]::after {
+    background: #80DE46 !important;
+}
+
+
+[bcolor="blue"]::after {
+    background: #4846de !important;
+}
+
+
+
+[bcolor="red"]::after {
+    background: #de4646 !important;
+}
